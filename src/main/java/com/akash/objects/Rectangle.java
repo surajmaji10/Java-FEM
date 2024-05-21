@@ -6,13 +6,13 @@ public class Rectangle {
     private double width;
 
     public Rectangle(){
-        this.length = 0;
-        this.width = 0;
+        setLength(0);
+        setWidth(0);
     }
 
     public Rectangle(double length, double width){
-        this.length = length;
-        this.width = width;
+        setLength(length);
+        setWidth(length);
     }
 
     public double calculateArea(){
