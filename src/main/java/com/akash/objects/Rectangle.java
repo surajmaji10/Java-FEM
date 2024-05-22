@@ -4,6 +4,7 @@ public class Rectangle {
     private final int sides = 4;
     private double length;
     private double width;
+    public String name;
 
     public Rectangle(){
         setLength(0);
@@ -45,7 +46,7 @@ public class Rectangle {
 
     @Override
     public String toString(){
-        return "Room[" +
+        return this.name + "[" +
                 "length=" + this.length +
                 ", width=" + this.width +
                 ", area=" + calculateArea() +

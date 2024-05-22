@@ -9,15 +9,31 @@ public class Room {
         var len = getRoomLength();
         var wid = getRoomWidth();
 
-        Rectangle room = new Rectangle(len, wid);
+        Rectangle bedroom = new Rectangle(len, wid);
 
-        double area = room.calculateArea();
-        double peri = room.calculatePerimeter();
+        double area = bedroom.calculateArea();
+        double peri = bedroom.calculatePerimeter();
 
-        System.out.println("The room that you wish to make will be of:");
+        System.out.println("The bedroom that you wish to make will be of:");
         System.out.println("Area = " + area);
         System.out.println("Perimeter = " + peri);
-        displayRoomDetails(room);
+        displayRoomDetails(bedroom);
+
+         len = getRoomLength();
+         wid = getRoomWidth();
+
+        Rectangle kitchen = new Rectangle(len, wid);
+
+         area = kitchen.calculateArea();
+         peri = kitchen.calculatePerimeter();
+
+        System.out.println("The kitchen that you wish to make will be of:");
+        System.out.println("Area = " + area);
+        System.out.println("Perimeter = " + peri);
+        displayRoomDetails(kitchen);
+
+        System.out.println("The total house that you wish to make will be of:");
+        System.out.println("Total Area = " + (bedroom.calculateArea() + kitchen.calculateArea()));
 
         scn.close();
     }
