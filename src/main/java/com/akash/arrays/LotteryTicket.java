@@ -27,6 +27,7 @@ public class LotteryTicket {
             }
             lottery[i] = randInt;
         }
+        Arrays.sort(lottery);
         return lottery;
     }
 
