@@ -28,6 +28,8 @@ public class Employee extends Person{
         super(name);
         System.out.println("Named Employee called");
         this.name = name;
+        String add = this.getAddress();
+        System.out.println(add);
     }
 
 }
