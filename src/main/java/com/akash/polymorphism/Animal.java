@@ -9,6 +9,6 @@ public class Animal {
         this.legs = 0;
     }
     public void makeSound(){
-        System.out.println("I don't know what to say.");
+        System.out.println("No Sound");
     }
 }

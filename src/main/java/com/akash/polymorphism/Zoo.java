@@ -5,18 +5,20 @@ public class Zoo {
 
         Cat kitty = new Cat();
         Dog doggy = new Dog();
-        Rabbit ribby = new Rabbit();
+        Rabbit rabby = new Rabbit();
 
         System.out.println(kitty instanceof Animal);
         System.out.println(doggy instanceof Animal);
-        System.out.println(ribby instanceof Animal);
+        System.out.println(rabby instanceof Animal);
+
+        System.out.println("------------------");
 
         kitty.makeSound();
         kitty.getDetails();
         doggy.makeSound();
         doggy.getDetails();
-        ribby.makeSound();
-        ribby.getDetails();
+        rabby.makeSound();
+        rabby.getDetails();
 
         System.out.println("------------------");
 
@@ -40,7 +42,7 @@ public class Zoo {
         boolean isCat = animal instanceof Cat;
         System.out.println("animal is Cat?" + isCat);
 
-        animal = ribby;
+        animal = rabby;
         Rabbit animalRabbit = (Rabbit)animal;
         animalRabbit.doSomething();
 
@@ -70,15 +72,48 @@ public class Zoo {
 
         Animal animal2 = new Animal();
         animal2.makeSound();
+        feed(animal2);
 
         animal2 = new Cat();
         animal2.makeSound();
+        feed(animal2);
 
         animal2 = new Dog();
         animal2.makeSound();
+        feed(animal2);
 
         animal2 = new Rabbit();
         animal2.makeSound();
+        feed(animal2);
 
+        System.out.println("------------------");
+
+        Animal sasha;
+        /*long way*/
+        sasha = new Dog();
+        if(sasha instanceof Dog){
+            Dog sashaDog = (Dog)sasha;
+            sashaDog.play();
+        }
+        /*short way*/
+        sasha = new Cat();
+        if(sasha instanceof Cat sashaCat){
+            sashaCat.sleep();
+        }
+
+        System.out.println("------------------");
+
+    }
+
+    public static void feed(Animal animal){
+        if(animal instanceof Dog){
+            System.out.println("I am eating bones");
+        }else if(animal instanceof Cat){
+            System.out.println("I am eating jerry");
+        }else if(animal instanceof Rabbit){
+            System.out.println("I am eating grass");
+        }else{
+            System.out.println("I don't know what to eat");
+        }
     }
 }
