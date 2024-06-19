@@ -12,4 +12,7 @@ public class Square extends Ractangle{
     public Square(int side){
         this.side = side;
     }
+    public void print(int side){
+        System.out.println("I am a rectangle with side " + side);
+    }
 }
