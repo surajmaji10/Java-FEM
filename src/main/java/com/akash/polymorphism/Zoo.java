@@ -7,6 +7,10 @@ public class Zoo {
         Dog doggy = new Dog();
         Rabbit ribby = new Rabbit();
 
+        System.out.println(kitty instanceof Animal);
+        System.out.println(doggy instanceof Animal);
+        System.out.println(ribby instanceof Animal);
+
         kitty.makeSound();
         kitty.getDetails();
         doggy.makeSound();
@@ -19,15 +23,35 @@ public class Zoo {
         Animal animal = new Animal();
         animal.makeSound();
 
+        boolean isAnimal = animal instanceof Animal;
+        System.out.println("animal is Animal?" + isAnimal);
+
+
+
         animal = doggy;
         ((Dog)animal).play();
+
+        boolean isDog = animal instanceof Dog;
+        System.out.println("animal is Dog?" + isDog);
 
         animal = kitty;
         ((Cat)animal).sleep();
 
+        boolean isCat = animal instanceof Cat;
+        System.out.println("animal is Cat?" + isCat);
+
         animal = ribby;
         Rabbit animalRabbit = (Rabbit)animal;
         animalRabbit.doSomething();
+
+        boolean isRabbit = animal instanceof Rabbit;
+        System.out.println("animal is Rabbit?" + isRabbit);
+        boolean isRabbit2 = animalRabbit instanceof Rabbit;
+        System.out.println("animalRabbit is Rabbit?" + isRabbit2);
+
+        System.out.println("------------------");
+
+
 
         System.out.println("------------------");
 
