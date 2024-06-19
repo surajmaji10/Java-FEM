@@ -29,4 +29,9 @@ public class Dog extends Animal{
         if(this.color != null) System.out.print("My color is " + this.getColor() + ". ");
         System.out.println("I have " + this.legs + " legs. ");
     }
+
+    public void play(){
+        System.out.println("I am playing");
+    }
+
 }

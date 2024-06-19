@@ -16,6 +16,21 @@ public class Zoo {
 
         System.out.println("------------------");
 
+        Animal animal = new Animal();
+        animal.makeSound();
+
+        animal = doggy;
+        ((Dog)animal).play();
+
+        animal = kitty;
+        ((Cat)animal).sleep();
+
+        animal = ribby;
+        Rabbit animalRabbit = (Rabbit)animal;
+        animalRabbit.doSomething();
+
+        System.out.println("------------------");
+
         Cat kitty2 = new Cat("RED");
         Dog doggy2 = new Dog("GREEN");
         Rabbit ribby2 = new Rabbit("BLUE");
@@ -29,17 +44,17 @@ public class Zoo {
 
         System.out.println("------------------");
 
-        Animal ani = new Animal();
-        ani.makeSound();
+        Animal animal2 = new Animal();
+        animal2.makeSound();
 
-        ani = new Cat();
-        ani.makeSound();
+        animal2 = new Cat();
+        animal2.makeSound();
 
-        ani = new Dog();
-        ani.makeSound();
+        animal2 = new Dog();
+        animal2.makeSound();
 
-        ani = new Rabbit();
-        ani.makeSound();
+        animal2 = new Rabbit();
+        animal2.makeSound();
 
     }
 }
